@@ -23,9 +23,9 @@ jobs:
 
       - name: Build and validate filtered XML
         run: |
-          python3 filter_feed.py \
+          python3 "filter_feed(1).py" \
             --source "https://api.domfarfora.ru/bitrix/catalog_export/yandex-direct.xml" \
-            --blacklist blocked_vendors.txt \
+            --blacklist "blocked_vendors(1).txt" \
             --output feed.xml
 
       - name: Create new release
